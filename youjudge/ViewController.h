@@ -7,9 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIWebViewDelegate>
 
+@property IBOutlet UIWebView *visibleWebView;
+@property IBOutlet UILabel *loadingMessage;
+@property IBOutlet UILabel *noConnectionMessage;
+@property IBOutlet UIButton *tryAgainBtn;
+
+@property (strong) NSURL *lastVisitedURL;
+
+- (void)refresh;
+- (void)startYouJudge;
+- (void)tryToConnect;
+- (void)setDisconnected;
+- (void)setLoading;
 
 @end
 

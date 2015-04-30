@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18D8D2191AF2BAD10004376A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8D2181AF2BAD10004376A /* Reachability.m */; };
 		18FBC44A1AEFFC7000373968 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FBC4491AEFFC7000373968 /* main.m */; };
 		18FBC44D1AEFFC7000373968 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FBC44C1AEFFC7000373968 /* AppDelegate.m */; };
 		18FBC4501AEFFC7000373968 /* youjudge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18FBC44E1AEFFC7000373968 /* youjudge.xcdatamodeld */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18D8D2171AF2BAD10004376A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		18D8D2181AF2BAD10004376A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		18FBC4441AEFFC7000373968 /* youjudge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = youjudge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FBC4481AEFFC7000373968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18FBC4491AEFFC7000373968 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 				18FBC44C1AEFFC7000373968 /* AppDelegate.m */,
 				18FBC4511AEFFC7000373968 /* ViewController.h */,
 				18FBC4521AEFFC7000373968 /* ViewController.m */,
+				18D8D2171AF2BAD10004376A /* Reachability.h */,
+				18D8D2181AF2BAD10004376A /* Reachability.m */,
 				18FBC4541AEFFC7000373968 /* Main.storyboard */,
 				18FBC4571AEFFC7000373968 /* Images.xcassets */,
 				18FBC4591AEFFC7000373968 /* LaunchScreen.xib */,
@@ -226,6 +231,7 @@
 				18FBC44A1AEFFC7000373968 /* main.m in Sources */,
 				18FBC4531AEFFC7000373968 /* ViewController.m in Sources */,
 				18FBC4501AEFFC7000373968 /* youjudge.xcdatamodeld in Sources */,
+				18D8D2191AF2BAD10004376A /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +428,7 @@
 				18FBC46C1AEFFC7100373968 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18FBC46D1AEFFC7100373968 /* Build configuration list for PBXNativeTarget "youjudgeTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +437,7 @@
 				18FBC46F1AEFFC7100373968 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,27 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView hidden="YES" contentMode="scaleAspectFit" fixedFrame="YES" restorationIdentifier="Browser" translatesAutoresizingMaskIntoConstraints="NO" id="DUn-Cm-fc6">
+                            <webView hidden="YES" contentMode="scaleAspectFit" ambiguous="YES" restorationIdentifier="Browser" translatesAutoresizingMaskIntoConstraints="NO" id="DUn-Cm-fc6">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <variation key="heightClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="20" width="320" height="568"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="YZ4-yM-JOE"/>
                                 </connections>
                             </webView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carregando..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyh-cZ-ZZd">
-                                <rect key="frame" x="108" y="242" width="105" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.78600457702020199" green="0.063057883902883582" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkt-BF-6nq">
                                 <rect key="frame" x="99" y="279" width="123" height="30"/>
                                 <state key="normal" title="Tentar novamente">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="99" y="289" width="123" height="30"/>
+                                </variation>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sem conexão, bixo." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6H-tn-u1G">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -44,19 +42,53 @@
                                 <color key="textColor" red="0.78600457700000004" green="0.0630578839" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="160" width="288" height="74"/>
+                                    <rect key="frame" x="89" y="242" width="153" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carregando..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyh-cZ-ZZd">
+                                <rect key="frame" x="108" y="242" width="105" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.78600457702020199" green="0.063057883902883582" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="99" y="-340" width="315" height="1115"/>
                                 </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DUn-Cm-fc6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="6y7-iB-CZ3"/>
+                            <constraint firstItem="DUn-Cm-fc6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="7hl-Xu-rCz"/>
+                            <constraint firstItem="Xyh-cZ-ZZd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="273.5" id="TiF-aR-oMi">
+                                <variation key="heightClass=regular" constant="-274"/>
+                            </constraint>
+                            <constraint firstItem="DUn-Cm-fc6" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="p7I-q2-KGu"/>
+                            <constraint firstItem="Xyh-cZ-ZZd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="107.5" id="y02-q9-Tov">
+                                <variation key="heightClass=regular" constant="-108"/>
+                            </constraint>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="f6H-tn-u1G"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6y7-iB-CZ3"/>
+                                <exclude reference="7hl-Xu-rCz"/>
+                                <exclude reference="p7I-q2-KGu"/>
+                                <exclude reference="TiF-aR-oMi"/>
+                                <exclude reference="y02-q9-Tov"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="f6H-tn-u1G"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6y7-iB-CZ3"/>
+                                <include reference="7hl-Xu-rCz"/>
+                                <include reference="p7I-q2-KGu"/>
+                                <include reference="TiF-aR-oMi"/>
+                                <include reference="y02-q9-Tov"/>
                             </mask>
                         </variation>
                     </view>
@@ -70,6 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" colorLabel="IBBuiltInLabel-Gray" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="211" y="289.5"/>
         </scene>
     </scenes>
 </document>

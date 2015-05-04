@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self.tryAgainBtn addTarget:self action:@selector(refresh) forControlEvents:UIControlEventTouchUpInside];
+    [self.loadingMessage setCenter:self.view.center];
     [self tryToConnect];
 }
 

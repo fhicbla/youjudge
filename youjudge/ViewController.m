@@ -40,7 +40,7 @@
 
 - (void)startYouJudge {
     if (!self.lastVisitedURL) {
-        self.lastVisitedURL = [NSURL URLWithString:@"http://youjudge.la"];
+        self.lastVisitedURL = [NSURL URLWithString:@"http://youjudge.la/"];
     }
     [self.visibleWebView setAutoresizingMask:(UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth)];
     [self.visibleWebView loadRequest:[NSURLRequest requestWithURL:self.lastVisitedURL]];
@@ -61,8 +61,11 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     if (error.code == -1009) {
         self.lastVisitedURL = [NSURL URLWithString:webView.request.URL.absoluteString];
-        [self setDisconnected];
+    } else if (error.code == -1004) {
+        self.lastVisitedURL = [NSURL URLWithString:@"http://youjudge.la/"];
+        NSLog(@"%@", error);
     }
+    [self setDisconnected];
 }
 
 - (void)setDisconnected {

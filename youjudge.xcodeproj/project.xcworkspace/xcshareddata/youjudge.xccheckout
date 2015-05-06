@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B108C400-431F-405A-AC77-D4EEFC84E824</string>
+	<key>IDESourceControlProjectName</key>
+	<string>youjudge</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C21488DF6FBB5D5D175DF2B24A9CD81F06D9CCD2</key>
+		<string>github.com:fhicbla/youjudge.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>youjudge.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C21488DF6FBB5D5D175DF2B24A9CD81F06D9CCD2</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:fhicbla/youjudge.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C21488DF6FBB5D5D175DF2B24A9CD81F06D9CCD2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C21488DF6FBB5D5D175DF2B24A9CD81F06D9CCD2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>youjudge</string>
+		</dict>
+	</array>
+</dict>
+</plist>

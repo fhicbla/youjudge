@@ -25,4 +25,3 @@
 - (void)setLoading;
 
 @end
-

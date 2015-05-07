@@ -27,7 +27,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RZ0-vf-GZl">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkt-BF-6nq">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkt-BF-6nq">
                                 <rect key="frame" x="99" y="279" width="123" height="30"/>
                                 <state key="normal" image="bt-tentar-novamente">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,14 +61,13 @@
                             <constraint firstItem="RZ0-vf-GZl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="PV8-mt-pbz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nkt-BF-6nq" secondAttribute="trailing" constant="-18" id="RMV-oM-tHK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RZ0-vf-GZl" secondAttribute="trailing" constant="-16" id="Tcr-ib-oV3"/>
-                            <constraint firstItem="Urz-FY-M8d" firstAttribute="top" secondItem="nkt-BF-6nq" secondAttribute="bottom" constant="100" id="WF8-NR-MkG"/>
                             <constraint firstItem="RZ0-vf-GZl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="WjN-W6-Ovp"/>
                             <constraint firstItem="Fm8-1h-X9o" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="bfZ-3s-K3n"/>
                             <constraint firstItem="RZ0-vf-GZl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="byg-qr-xy9"/>
                             <constraint firstItem="Fm8-1h-X9o" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="dpT-t7-ObP"/>
                             <constraint firstItem="Urz-FY-M8d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="134" id="ei6-rC-tyJ"/>
                             <constraint firstItem="DUn-Cm-fc6" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="p7I-q2-KGu"/>
-                            <constraint firstItem="Urz-FY-M8d" firstAttribute="top" secondItem="nkt-BF-6nq" secondAttribute="bottom" constant="100" id="vV9-Rt-GGZ"/>
+                            <constraint firstItem="Urz-FY-M8d" firstAttribute="top" secondItem="nkt-BF-6nq" secondAttribute="bottom" constant="50" id="vV9-Rt-GGZ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -77,6 +76,11 @@
                                 <exclude reference="Urz-FY-M8d"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="IXX-e7-plD"/>
+                                <exclude reference="ei6-rC-tyJ"/>
+                                <exclude reference="vV9-Rt-GGZ"/>
+                                <exclude reference="bfZ-3s-K3n"/>
+                                <exclude reference="dpT-t7-ObP"/>
                                 <exclude reference="KKI-fQ-MBd"/>
                                 <exclude reference="PV8-mt-pbz"/>
                                 <exclude reference="Tcr-ib-oV3"/>
@@ -85,14 +89,8 @@
                                 <exclude reference="6y7-iB-CZ3"/>
                                 <exclude reference="7hl-Xu-rCz"/>
                                 <exclude reference="p7I-q2-KGu"/>
-                                <exclude reference="bfZ-3s-K3n"/>
-                                <exclude reference="dpT-t7-ObP"/>
                                 <exclude reference="MV8-w9-zEO"/>
                                 <exclude reference="RMV-oM-tHK"/>
-                                <exclude reference="IXX-e7-plD"/>
-                                <exclude reference="WF8-NR-MkG"/>
-                                <exclude reference="ei6-rC-tyJ"/>
-                                <exclude reference="vV9-Rt-GGZ"/>
                                 <exclude reference="NYf-rk-8I8"/>
                             </mask>
                         </variation>
@@ -103,6 +101,11 @@
                                 <include reference="Urz-FY-M8d"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="IXX-e7-plD"/>
+                                <include reference="ei6-rC-tyJ"/>
+                                <include reference="vV9-Rt-GGZ"/>
+                                <include reference="bfZ-3s-K3n"/>
+                                <include reference="dpT-t7-ObP"/>
                                 <include reference="KKI-fQ-MBd"/>
                                 <include reference="PV8-mt-pbz"/>
                                 <include reference="Tcr-ib-oV3"/>
@@ -111,14 +114,8 @@
                                 <include reference="6y7-iB-CZ3"/>
                                 <include reference="7hl-Xu-rCz"/>
                                 <include reference="p7I-q2-KGu"/>
-                                <include reference="bfZ-3s-K3n"/>
-                                <include reference="dpT-t7-ObP"/>
                                 <include reference="MV8-w9-zEO"/>
                                 <include reference="RMV-oM-tHK"/>
-                                <include reference="IXX-e7-plD"/>
-                                <exclude reference="WF8-NR-MkG"/>
-                                <include reference="ei6-rC-tyJ"/>
-                                <include reference="vV9-Rt-GGZ"/>
                                 <include reference="NYf-rk-8I8"/>
                             </mask>
                         </variation>

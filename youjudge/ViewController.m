@@ -18,13 +18,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self setNeedsStatusBarAppearanceUpdate];
+    [self configBackgroundImage];
     [self.tryAgainBtn addTarget:self action:@selector(refresh) forControlEvents:UIControlEventTouchUpInside];
-    [self.loadingMessage setCenter:self.view.center];
+    [self.loading setCenter:self.view.center];
+    [self.loading startAnimating];
     self.visibleWebView.scrollView.bounces = NO;
     [self tryToConnect];
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle{
+- (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
 
@@ -34,7 +36,7 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [self.loadingMessage setHidden:YES];
+    [self.loading setHidden:YES];
     [self.visibleWebView setHidden:FALSE];
 }
 
@@ -76,7 +78,7 @@
 
 - (void)setDisconnected {
     [self.visibleWebView setHidden:YES];
-    [self.loadingMessage setHidden:YES];
+    [self.loading setHidden:YES];
     [self.noConnectionMessage setHidden:NO];
     [self.tryAgainBtn setHidden:NO];
 }
@@ -84,7 +86,37 @@
 - (void)setLoading {
     [self.tryAgainBtn setHidden:YES];
     [self.noConnectionMessage setHidden:YES];
-    [self.loadingMessage setHidden:NO];
+    [self.loading setHidden:NO];
+}
+
+- (void)configBackgroundImage {
+    CGSize deviceScreenSize = [[UIScreen mainScreen] bounds].size;
+    if (deviceScreenSize.height == 480) {
+        // iPhone 4S
+        if ([[UIScreen mainScreen] scale] > 1.9 && [[UIScreen mainScreen] scale] < 2.1)
+            [self.backgroundImage setImage:[UIImage imageNamed:@"LaunchImage-700@2x.png"]];
+    } else if (deviceScreenSize.height == 568) {
+        // iPhone 5/5S
+        if ([[UIScreen mainScreen] scale] > 1.9 && [[UIScreen mainScreen] scale] < 2.1)
+            [self.backgroundImage setImage:[UIImage imageNamed:@"LaunchImage-700-568h@2x.png"]];
+    } else if (deviceScreenSize.height == 667) {
+        // iPhone 6
+        if ([[UIScreen mainScreen] scale] > 1.9 && [[UIScreen mainScreen] scale] < 2.1)
+            [self.backgroundImage setImage:[UIImage imageNamed:@"LaunchImage-800-667h@2x.png"]];
+    } else if (deviceScreenSize.height == 736) {
+        // iPhone 6 Plus
+        if ([[UIScreen mainScreen] scale] > 2.1)
+            [self.backgroundImage setImage:[UIImage imageNamed:@"LaunchImage-800-Portrait-736h@3x.png"]];
+    } else if (deviceScreenSize.height == 1024) {
+        // iPad 2
+        if ([[UIScreen mainScreen] scale] < 1.1)
+            [self.backgroundImage setImage:[UIImage imageNamed:@"LaunchImage-700-Portrait~ipad.png"]];
+        // iPad Retina
+        if ([[UIScreen mainScreen] scale] > 1.9 && [[UIScreen mainScreen] scale] < 2.1)
+            [self.backgroundImage setImage:[UIImage imageNamed:@"LaunchImage-700-Portrait@2x~ipad.png"]];
+    }
+    NSLog(@"Resolução (altura): %f", deviceScreenSize.height);
+    NSLog(@"Escala (altura): %f", [[UIScreen mainScreen] scale]);
 }
 
 @end

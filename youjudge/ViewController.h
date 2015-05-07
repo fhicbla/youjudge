@@ -12,9 +12,10 @@
 @interface ViewController : UIViewController <UIWebViewDelegate>
 
 @property IBOutlet UIWebView *visibleWebView;
-@property IBOutlet UILabel *loadingMessage;
 @property IBOutlet UILabel *noConnectionMessage;
 @property IBOutlet UIButton *tryAgainBtn;
+@property IBOutlet UIActivityIndicatorView *loading;
+@property IBOutlet UIImageView *backgroundImage;
 
 @property (strong) NSURL *lastVisitedURL;
 
@@ -23,5 +24,6 @@
 - (void)tryToConnect;
 - (void)setDisconnected;
 - (void)setLoading;
+- (void)configBackgroundImage;
 
 @end

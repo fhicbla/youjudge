@@ -115,8 +115,6 @@
         if ([[UIScreen mainScreen] scale] > 1.9 && [[UIScreen mainScreen] scale] < 2.1)
             [self.backgroundImage setImage:[UIImage imageNamed:@"LaunchImage-700-Portrait@2x~ipad.png"]];
     }
-    NSLog(@"Resolução (altura): %f", deviceScreenSize.height);
-    NSLog(@"Escala (altura): %f", [[UIScreen mainScreen] scale]);
 }
 
 @end

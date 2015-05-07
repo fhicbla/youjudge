@@ -18,8 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [Parse setApplicationId:@"UQ6QqcQqhgqGdg6D5USQeyPzwLOHmFsCWGTxMdTr"
-                  clientKey:@"gg4VW3qZFLEi9Nf6dh6R68necAWcyCJFijL2OXJi"];
+    [Parse setApplicationId:@"2pA5Fgpkrf65Gy32wviIkRgD3IHegr1xuBtlYw5T"
+                  clientKey:@"NSl5SzRMF2d1tVwapZAb4ktNGlrmu8VBccTLMedR"];
     // Register for Push Notitications
     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
                                                     UIUserNotificationTypeBadge |

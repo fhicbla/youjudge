@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1862DDAD1AFBAFAA00D6DB87 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1862DDAB1AFBAFAA00D6DB87 /* Accounts.framework */; };
+		1862DDAE1AFBAFAA00D6DB87 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1862DDAC1AFBAFAA00D6DB87 /* Social.framework */; };
 		18D8D2191AF2BAD10004376A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8D2181AF2BAD10004376A /* Reachability.m */; };
 		18E4C02B1AF7D5F900F9FAD1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E4C0291AF7D5F900F9FAD1 /* Bolts.framework */; };
 		18E4C02C1AF7D5F900F9FAD1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E4C02A1AF7D5F900F9FAD1 /* Parse.framework */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1862DDAB1AFBAFAA00D6DB87 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		1862DDAC1AFBAFAA00D6DB87 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		18D8D2171AF2BAD10004376A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		18D8D2181AF2BAD10004376A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		18E4C0291AF7D5F900F9FAD1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1862DDAD1AFBAFAA00D6DB87 /* Accounts.framework in Frameworks */,
+				1862DDAE1AFBAFAA00D6DB87 /* Social.framework in Frameworks */,
 				18E4C0381AF7D6E200F9FAD1 /* AudioToolbox.framework in Frameworks */,
 				18E4C0391AF7D6E200F9FAD1 /* CFNetwork.framework in Frameworks */,
 				18E4C03A1AF7D6E200F9FAD1 /* CoreGraphics.framework in Frameworks */,
@@ -107,6 +113,8 @@
 		186AB0E31AFA9C3600BAC956 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1862DDAB1AFBAFAA00D6DB87 /* Accounts.framework */,
+				1862DDAC1AFBAFAA00D6DB87 /* Social.framework */,
 				18E4C02D1AF7D6E200F9FAD1 /* AudioToolbox.framework */,
 				18E4C02E1AF7D6E200F9FAD1 /* CFNetwork.framework */,
 				18E4C02F1AF7D6E200F9FAD1 /* CoreGraphics.framework */,

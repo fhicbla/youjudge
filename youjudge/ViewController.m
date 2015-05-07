@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self setNeedsStatusBarAppearanceUpdate];
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     [self configBackgroundImage];
     [self.tryAgainBtn addTarget:self action:@selector(refresh) forControlEvents:UIControlEventTouchUpInside];
     [self.loading setCenter:self.view.center];
@@ -77,15 +78,16 @@
 }
 
 - (void)setDisconnected {
+    [self.backgroundImage setHidden:YES];
     [self.visibleWebView setHidden:YES];
     [self.loading setHidden:YES];
-    [self.noConnectionMessage setHidden:NO];
+    [self.noConnectionImage setHidden:NO];
     [self.tryAgainBtn setHidden:NO];
 }
 
 - (void)setLoading {
     [self.tryAgainBtn setHidden:YES];
-    [self.noConnectionMessage setHidden:YES];
+    //[self.noConnectionImage setHidden:YES];
     [self.loading setHidden:NO];
 }
 

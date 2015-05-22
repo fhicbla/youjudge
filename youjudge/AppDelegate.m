@@ -23,11 +23,15 @@
     // Register for Push Notitications
     UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
                                                     UIUserNotificationTypeBadge |
+        
                                                     UIUserNotificationTypeSound);
     UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
                                                                              categories:nil];
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
+    
+    [PFUser enableAutomaticUser];
+    
     return YES;
 }
 
@@ -47,6 +51,26 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
+    
+    NSString *deviceToken = [[PFInstallation currentInstallation] deviceToken];
+    if(deviceToken != nil) {
+        NSMutableDictionary *cookieProperties = [NSMutableDictionary dictionary];
+        [cookieProperties setObject:@"parse_device_token" forKey:NSHTTPCookieName];
+        [cookieProperties setObject:deviceToken forKey:NSHTTPCookieValue];
+        [cookieProperties setObject:YOUJUDGE_DOMAIN  forKey:NSHTTPCookieDomain];
+        //[cookieProperties setObject:YOUJUDGE_URL forKey:NSHTTPCookieOriginURL];
+        [cookieProperties setObject:@"/" forKey:NSHTTPCookiePath];
+        [cookieProperties setObject:@"0" forKey:NSHTTPCookieVersion];
+    
+        // set expiration to one month from now or any NSDate of your choosing
+        // this makes the cookie sessionless and it will persist across web sessions and app launches
+        /// if you want the cookie to be destroyed when your app exits, don't set this
+        //[cookieProperties setObject:[[NSDate date] dateByAddingTimeInterval:2629743] forKey:NSHTTPCookieExpires];
+    
+        NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:cookieProperties];
+        [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

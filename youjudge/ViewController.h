@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Reachability.h"
+#import <Parse/Parse.h>
+
+#define YOUJUDGE_URL @"http://youjudge.la/"
 
 @interface ViewController : UIViewController <UIWebViewDelegate>
 

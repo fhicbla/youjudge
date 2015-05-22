@@ -24,6 +24,7 @@
     [self.loading setCenter:self.view.center];
     [self.loading startAnimating];
     self.visibleWebView.scrollView.bounces = NO;
+    [self setParseDeviceTokenCookie];
     [self tryToConnect];
 }
 
@@ -49,7 +50,7 @@
 
 - (void)startYouJudge {
     if (!self.lastVisitedURL) {
-        self.lastVisitedURL = [NSURL URLWithString:@"http://youjudge.la/"];
+        self.lastVisitedURL = [NSURL URLWithString: YOUJUDGE_URL];
     }
     [self.visibleWebView setAutoresizingMask:(UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth)];
     [self.visibleWebView loadRequest:[NSURLRequest requestWithURL:self.lastVisitedURL]];
@@ -71,7 +72,7 @@
     if (error.code == -1009) {
         self.lastVisitedURL = [NSURL URLWithString:webView.request.URL.absoluteString];
     } else if (error.code == -1004) {
-        self.lastVisitedURL = [NSURL URLWithString:@"http://youjudge.la/"];
+        self.lastVisitedURL = [NSURL URLWithString: YOUJUDGE_URL];
         NSLog(@"%@", error);
     }
     [self setDisconnected];
@@ -116,6 +117,15 @@
         // iPad Retina
         if ([[UIScreen mainScreen] scale] > 1.9 && [[UIScreen mainScreen] scale] < 2.1)
             [self.backgroundImage setImage:[UIImage imageNamed:@"LaunchImage-700-Portrait@2x~ipad.png"]];
+    }
+}
+
+- (void)setParseDeviceTokenCookie {
+    NSHTTPCookie *cookie;
+    NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (cookie in [cookieJar cookies])
+    {
+        //NSLog(@"%@cookiecookiecookiecookie", cookie);
     }
 }
 

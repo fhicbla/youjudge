@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
+#define YOUJUDGE_DOMAIN @"youjudge.la"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
